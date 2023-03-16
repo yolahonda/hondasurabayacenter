@@ -1,6 +1,7 @@
 :root {
   --primary: #ff000f;
   --bg: #ffffff;
+  --bg2: rgb(0, 0, 0) f;
   --sekunder: rgb(67, 67, 67);
 }
 
@@ -17,12 +18,12 @@ body {
   font-family: "popins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 10000px;
+  min-height: calc(100vh 211px 58px);
+  position: relative;
 }
 
 .img-logo {
   width: 170px;
-
   border-color: black;
   border-radius: 1px;
 }
@@ -44,6 +45,7 @@ body {
   right: 0;
   top: 0;
   z-index: 9999;
+  background-color: #fff;
 }
 
 .navbar .navbar-nav a {
@@ -120,19 +122,22 @@ body {
 
 /* sales consultant section */
 .about,
-.pilihanunit {
+.pilihanunit,
+.hubungikami {
   padding: 10rem 7% 1.4rem;
   color: #de0715;
 }
 .about h2,
-.pilihanunit {
+.pilihanunit,
+.hubungikami h2 {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 3rem;
 }
 
 .about h2 span,
-.pilihanunit h2 span {
+.pilihanunit h2 span,
+.hubungikami h2 span {
   color: #000000;
 }
 .about .row {
@@ -233,7 +238,7 @@ th {
   border: 1px solid rgb(0, 0, 0);
   border-collapse: collapse;
 }
-tr,
+.tr,
 td {
   padding: 1rem;
   margin-top: 2rem;
@@ -254,9 +259,81 @@ td {
   justify-content: center;
 }
 
-/* Media querys */
+/* Persyaratan Kredit */
+h3 {
+  padding: 1rem;
+}
 
-/* Laptop */
+/* Hubungi Kami*/
+.hubungikami .row .form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #000000;
+  padding-left: 3rem;
+}
+.input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background-color: none;
+}
+.btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #de0715;
+  cursor: pointer;
+  margin-left: 5.5rem;
+}
+.row {
+  padding: 0.5rem;
+}
+/*footer*/
+footer {
+  background-color: #de0715;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+footer.socials {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+  margin-bottom: 1rem;
+}
+footer .socials a :hover footer .links a :hover {
+  color: #000000;
+}
+.links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 1rem 1rem;
+  margin-bottom: 1.5rem;
+}
+/* Media queries*/
+/* Laptop*/
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -267,10 +344,6 @@ td {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
-  }
-
-  #menu {
-    display: inline-block;
   }
 
   .about .row {
@@ -290,6 +363,12 @@ td {
   }
   .about .content li {
     font-size: 1.6rem;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  #menu {
+    display: inline-block;
   }
 
   /* Handphone */
